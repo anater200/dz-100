@@ -27,7 +27,7 @@ public class Woman extends Person {
             if (revertLastName) {
                 setLastName(getPartner().getFirstName());
             } else {
-                setLastName("");
+                setPartner(null);
             }
         }
     }

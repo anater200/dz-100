@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person {
     private String firstName;
     private String lastName;
     private int age;
@@ -43,28 +43,12 @@ public class Person {
     }
 
     public boolean isRetired() {
-        if (this instanceof Woman) {
-            return age >= 60;
-        } else if (this instanceof Man) {
-            return age >= 65;
-        } else {
-            return false;
-        }
+        return false;
     }
 
     public void registerPartnership() {
-        if (partner != null) {
-            partner.setLastName(lastName);
-        }
     }
 
     public void deregisterPartnership(boolean revertLastName) {
-        if (partner != null) {
-            if (revertLastName) {
-                partner.setLastName(partner.getLastName());
-            } else {
-                partner.setLastName("");
-            }
-        }
     }
 }

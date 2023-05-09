@@ -14,21 +14,4 @@ public class Man extends Person {
     public boolean isRetired() {
         return getAge() >= 65;
     }
-    @Override
-    public void registerPartnership() {
-        if (getPartner() != null) {
-            getPartner().setLastName(getLastName());
-        }
-    }
-
-    @Override
-    public void deregisterPartnership(boolean revertLastName) {
-        if (getPartner() != null) {
-            if (revertLastName) {
-                getPartner().setLastName(getPartner().getFirstName());
-            } else {
-                getPartner().setLastName("");
-            }
-        }
-    }
 }
